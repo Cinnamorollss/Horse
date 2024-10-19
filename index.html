@@ -3,22 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantasy Horse Reality</title>
+    <title>Celestial Herds</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header>
+        <h1>Celestial Herds</h1>
+        <div id="currency-display">
+            <!-- Currency will be displayed here -->
+        </div>
+        <div class="user-info">
+            <!-- User info will be populated by JavaScript -->
+        </div>
+    </header>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="stable.html">Stable</a></li>
-            <li><a href="market.html">Market</a></li>
-            <li><a href="messages.html">Messages</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="lore.html">Lore</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#stable">Stable</a></li>
+            <li><a href="#market">Market</a></li>
+            <li><a href="#messages">Messages</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#lore">Lore</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="main-content">
+        <!-- Main game content will be loaded here -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Celestial Herds. All rights reserved.</p>
+    </footer>
+    <script src="currencyDB.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
         <section id="game-intro">
             <img src="https://cdn.leonardo.ai/users/1fff0d16-fdc3-46a3-b77d-51d51260dced/generations/2768765a-6fe0-4691-bef7-8eacff6b8efa/Leonardo_Phoenix_oil_painting_of_a_horse_on_canvas_in_the_styl_0.jpg" alt="Majestic fantasy horse" class="main-image">
             <h2>Welcome to Fantasy Horse Reality</h2>
