@@ -3,48 +3,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const breedLore = [
         {
-            name: "Unicorn",
-            image: "images/unicorn.jpg",
-            backstory: "Unicorns are majestic creatures born from the purest starlight. They roam the enchanted forests, bringing hope and healing wherever they go.",
-            abilities: [
-                "Healing touch",
-                "Purification of water",
-                "Telepathic communication"
-            ],
-            funFacts: [
-                "A unicorn's horn is said to be made of solidified moonbeams",
-                "They can only be approached by those with pure hearts",
-                "Unicorn hair is a powerful ingredient in many magical potions"
-            ]
-        },
-        {
             name: "Pegasus",
-            image: "images/pegasus.jpg",
-            backstory: "Pegasi are celestial horses, born from the union of wind and clouds. They soar through the skies, bridging the gap between earth and heaven.",
+            backstory: "Pegasus are said to be born from the tears of angels, their wings crafted from clouds, and their beautiful manes woven from the sun's light rays.",
             abilities: [
-                "Flight",
-                "Weather manipulation",
-                "Cloud walking"
+                "Celestial Flight",
+                "Stormcaller",
+                "Temporal Glimpse"
             ],
             funFacts: [
-                "Pegasi feathers are highly prized for their magical properties",
-                "They can travel at speeds rivaling the fastest winds",
-                "Young pegasi learn to fly before they can walk"
+                "Pegasus are known to collect feathers from other birds and use them as fashion accessories",
+                "The connection between Pegasus and angels is so profound that when they bond with an angel, it lasts a lifetime.",
+                "Their favourite is the Watermelon."
             ]
         },
         {
-            name: "Kelpie",
-            image: "images/kelpie.jpg",
-            backstory: "Kelpies are shape-shifting water spirits that usually appear in the form of horses. They inhabit the lochs and rivers of the misty highlands.",
+            name: "Floralquin",
+            backstory: "Floralquin are ancient horses that protect the forests they roam. Their manes and tails are said to be made from ancient tree bark, their eyes are made from acorns and their coats are composed of flower petals.",
             abilities: [
-                "Shape-shifting",
-                "Water breathing",
-                "Control over water currents"
+                "Nature's Guardian",
+                "Whispering Winds",
+                "Seed Sower"
             ],
             funFacts: [
-                "Kelpies can appear as beautiful horses or handsome humans to lure the unwary",
-                "Their manes are said to always be dripping with water",
-                "In some legends, capturing a kelpie's bridle gives you power over it"
+                "Floralquin were thought to be mere myths for centuries. However, when the explorer Sir Bert discovered their homeland, the Aetherwood Archipelago, and named it after these beautiful steeds, the world finally recognized their existence.",
+                "While Floralquin have a deep love for all animals, they hold a particular disdain for beavers. This animosity stems from the fact that beavers construct dams from the ancient trees the Floralquin revere and protect.",
+                "In celebration of a new foal's birth, Floralquin partake in a peculiar ritual—eating chilies. They believe that enduring the heat will imbue the foal with strength and resilience."
+            ]
+        },
+        {
+            name: "Wraithsteeds",
+            backstory: "Wraithsteeds are the remnants of noble steeds who once roamed the earth, serving great heroes and guiding lost souls. Often adorned with remnants of their former lives, such as tattered saddles or bridle pieces, they embody a haunting beauty.",
+            abilities: [
+                "Soulbound Empathy",
+                "Veil of Shadows",
+                "Ethereal Passage"
+            ],
+            funFacts: [
+                "Wraithsteeds can change the color of their glowing eyes depending on their mood.",
+                "Some believe that if a Wraithsteed nuzzles you, it brings good luck.",
+                "They often have midnight gallops, leaving trails of shimmering light in their wake that look like falling stars."
             ]
         },
         // Add more breeds as needed
