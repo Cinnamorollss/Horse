@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market - Celestial Herds</title>
+    <title>Market - Fantasy Horse Reality</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="market.css">
 </head>
 <body>
+    <header>
+        <h1>Fantasy Horse Reality</h1>
+        <div class="user-info">
+            <!-- User info will be populated by JavaScript -->
+        </div>
+    </header>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -19,32 +26,25 @@
     </nav>
     <main>
         <h2>Horse Market</h2>
-        <div class="breed-grid">
-            <div class="breed-card">
-                <img src="https://i.imgur.com/CrsXESM.png" alt="Minty Fresh">
-                <p>Minty Fresh</p>
-            </div>
-            <div class="breed-card">
-                <img src="https://i.imgur.com/Gp3xS5x.png" alt="Bon Bon">
-                <p>Bon Bon</p>
-            </div>
-            <div class="breed-card">
-                <img src="https://i.imgur.com/eI45ow2.png" alt="Neapolita">
-                <p>Neapolita</p>
-            </div>
-            <div class="breed-card">
-                <img src="https://i.imgur.com/aH4dVXr.png" alt="Seafoam">
-                <p>Seafoam</p>
-            </div>
-                <div class="breed-card">
-                <img src="https://i.imgur.com/K5nXwpL.png" alt="Sirius">
-                <p>Sirius</p>
+        <div id="market-grid" class="market-grid">
+            <!-- Horse cards will be dynamically populated here -->
         </div>
     </main>
+    <div id="horse-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-horse-name"></h2>
+            <img id="modal-horse-image" src="" alt="">
+            <h3>Backstory</h3>
+            <p id="modal-horse-backstory"></p>
+            <h3>Fun Facts</h3>
+            <ul id="modal-horse-facts"></ul>
+            <button id="purchase-button">Purchase</button>
+        </div>
+    </div>
     <footer>
-        &copy; 2024 Celestial Herds. All rights reserved.
+        &copy; 2024 Fantasy Horse Reality. All rights reserved.
     </footer>
-    <script src="header.js"></script>
     <script src="market.js"></script>
 </body>
 </html>
