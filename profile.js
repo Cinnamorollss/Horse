@@ -7,24 +7,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Sample user data (replace with actual data fetching logic)
     let userData = {
         username: 'Player123',
-        accountCreated: '2024-01-01',
-        favHorseBreed: 'Pegasus',
-        pronouns: 'They/Them',
-        country: 'Equestria',
-        description: 'Horse enthusiast and magical creature tamer.'
+        accountCreated: '2024-01-01', // This should be set when the account is created and not editable
+        favHorseBreed: '',
+        pronouns: '',
+        country: '',
+        description: ''
     };
 
     function updateProfileDisplay() {
         document.getElementById('username').textContent = userData.username;
         document.getElementById('account-created').textContent = userData.accountCreated;
-        document.getElementById('fav-horse-breed').textContent = userData.favHorseBreed;
-        document.getElementById('pronouns').textContent = userData.pronouns;
-        document.getElementById('country').textContent = userData.country;
-        document.getElementById('description').textContent = userData.description;
+        document.getElementById('fav-horse-breed').textContent = userData.favHorseBreed || 'Not set';
+        document.getElementById('pronouns').textContent = userData.pronouns || 'Not set';
+        document.getElementById('country').textContent = userData.country || 'Not set';
+        document.getElementById('description').textContent = userData.description || 'Not set';
     }
 
     function populateEditForm() {
-        document.getElementById('edit-account-created').value = userData.accountCreated;
         document.getElementById('edit-fav-horse-breed').value = userData.favHorseBreed;
         document.getElementById('edit-pronouns').value = userData.pronouns;
         document.getElementById('edit-country').value = userData.country;
@@ -44,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         
         // Update userData with form values
-        userData.accountCreated = document.getElementById('edit-account-created').value;
         userData.favHorseBreed = document.getElementById('edit-fav-horse-breed').value;
         userData.pronouns = document.getElementById('edit-pronouns').value;
         userData.country = document.getElementById('edit-country').value;
