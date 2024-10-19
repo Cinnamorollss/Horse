@@ -5,23 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Celestial Herds</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .currency-icon {
-            width: 20px;
-            height: auto;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1>Celestial Herds</h1>
         <div id="currency-display">
-            <img src="assets/radiant_icon.png" alt="Radiant Icon" class="currency-icon">
-            <span id="radiant-amount">Radiant: 0</span>
-            <img src="assets/fluttergem_icon.png" alt="Fluttergem Icon" class="currency-icon">
-            <span id="fluttergem-amount">Fluttergem: 0</span>
+            <div class="currency">
+                <img src="assets/radiant_icon.png" alt="Radiant Icon" class="currency-icon">
+                <span id="radiant-amount">0</span>
+            </div>
+            <div class="currency">
+                <img src="assets/fluttergem_icon.png" alt="Fluttergem Icon" class="currency-icon">
+                <span id="fluttergem-amount">0</span>
+            </div>
         </div>
         <div class="user-info">
             <!-- User info will be populated by JavaScript -->
