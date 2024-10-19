@@ -58,9 +58,17 @@ function setupNavigation() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const pageId = this.getAttribute('data-page');
-            showPage(pageId);
+            if (pageId) {
+                showPage(pageId);
+            }
         });
     });
+
+    // Handle initial page load or direct link
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+        showPage(hash);
+    }
 }
 
 // Example functions for adding and removing currency
