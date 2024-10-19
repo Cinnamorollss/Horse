@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "They often have midnight gallops, leaving trails of shimmering light in their wake that look like falling stars."
             ]
         },
-         {
+        {
             name: "Nebulamane",
-            backstory: "ebulamane are not ordinary horses; they are born from the final breaths of dying stars, each embodying the essence of the universe's most luminous wonders. From this cosmic dust, Nebulamane are formed, infused with the remnants of starlight and energy, each horse uniquely reflecting the characteristics of the star from which it originated.",
+            backstory: "Nebulamane are not ordinary horses; they are born from the final breaths of dying stars, each embodying the essence of the universe's most luminous wonders. From this cosmic dust, Nebulamane are formed, infused with the remnants of starlight and energy, each horse uniquely reflecting the characteristics of the star from which it originated.",
             abilities: [
                 "Starwhisper Communication",
                 "Cosmic Resilience",
@@ -55,7 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
             funFacts: [
                 "Nebulamane participate in a ritual known as the Star Song, where they gather together to sing their cosmic melodies.",
                 "Nebulamane are known to weave dreams for mortals.",
-                "When a shooting star is seen in the sky, it’s actually a Nebulamane galloping across the cosmos, bringing wishes from the stars."
+                "When a shooting star is seen in the sky, it's actually a Nebulamane galloping across the cosmos, bringing wishes from the stars."
+            ]
+        }
         // Add more breeds as needed
     ];
 
@@ -68,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="toggle-icon">+</span>
             </div>
             <div class="lore-card-content">
-                <img src="${breed.image}" alt="${breed.name}">
                 <h4>Backstory</h4>
                 <p>${breed.backstory}</p>
                 <h4>Abilities</h4>
