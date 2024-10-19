@@ -41,7 +41,7 @@ function updateUserInfo() {
 }
 
 function setupNavigation() {
-    const navLinks = document.querySelectorAll('nav a');
+    const navLinks = document.querySelectorAll('nav a, header h1 a');
     const pages = document.querySelectorAll('.page');
 
     function showPage(pageId) {
