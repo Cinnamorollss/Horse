@@ -5,15 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Celestial Herds</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .currency-icon {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -34,49 +25,69 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#stable">Stable</a></li>
-            <li><a href="#market">Market</a></li>
-            <li><a href="#messages">Messages</a></li>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#lore">Lore</a></li>
+            <li><a href="#home" data-page="home">Home</a></li>
+            <li><a href="#stable" data-page="stable">Stable</a></li>
+            <li><a href="#market" data-page="market">Market</a></li>
+            <li><a href="#messages" data-page="messages">Messages</a></li>
+            <li><a href="#profile" data-page="profile">Profile</a></li>
+            <li><a href="#lore" data-page="lore">Lore</a></li>
         </ul>
     </nav>
     <main id="main-content">
-        <section id="home" class="page">
+        <section id="home" class="page active">
             <h2>Welcome to Celestial Herds</h2>
             <img src="https://cdn.leonardo.ai/users/1fff0d16-fdc3-46a3-b77d-51d51260dced/generations/2768765a-6fe0-4691-bef7-8eacff6b8efa/Leonardo_Phoenix_oil_painting_of_a_horse_on_canvas_in_the_styl_0.jpg" alt="Celestial Horse" class="main-image">
-            <p>Embark on a magical journey where you can breed, train, and care for mythical ponies. Create your own legendary stable and compete with players from around the world!</p>
+            <p>Embark on a magical journey where you can breed, train, and care for mythical horses. Create your own legendary stable and compete with players from around the world!</p>
+            <section id="game-features">
+                <h3>Game Features</h3>
+                <ul>
+                    <li>Breed and raise mythical horses like Unicorns, Pegasi, and Kelpies</li>
+                    <li>Train your horses and compete in magical races and tournaments</li>
+                    <li>Trade horses with other players in the global market</li>
+                    <li>Customize your stable and horses with unique accessories</li>
+                </ul>
+            </section>
+            <section id="tips-tricks">
+                <h3>Tips & Tricks</h3>
+                <ul>
+                    <li>Visit your stable daily to bond with your horses and increase their stats</li>
+                    <li>Participate in daily quests to earn extra rewards</li>
+                    <li>Join a guild to access exclusive content and get help from experienced players</li>
+                    <li>Diversify your stable with different breeds to excel in various competitions</li>
+                </ul>
+            </section>
+            <section id="support-subscribe">
+                <div id="support">
+                    <h3>Support the Game</h3>
+                    <p>Love Celestial Herds? Consider supporting us to help keep the magic alive!</p>
+                    <a href="#" class="button" id="donate-button">Donate</a>
+                </div>
+                <div id="subscribe">
+                    <h3>Subscribe for Premium Benefits</h3>
+                    <p>Unlock exclusive horses, special events, and more with our premium subscription!</p>
+                    <a href="#" class="button" id="subscribe-button">Subscribe Now</a>
+                </div>
+            </section>
         </section>
-        <section id="game-features">
-            <h3>Game Features</h3>
-            <ul>
-                <li>Breed and raise mythical ponies</li>
-                <li>Train your horses and compete in magical races and tournaments</li>
-                <li>Trade horses with other players in the global market</li>
-                <li>Collect common, rare and extremely rare ponies</li>
-            </ul>
+        <section id="stable" class="page">
+            <h2>Stable</h2>
+            <p>Welcome to your stable. Here you can manage your horses.</p>
         </section>
-        <section id="tips-tricks">
-            <h3>Tips & Tricks</h3>
-            <ul>
-                <li>Visit your stable daily to bond with your horses and increase their stats</li>
-                <li>Participate in daily quests to earn extra rewards</li>
-                <li>Join a guild to access exclusive content and get help from experienced players</li>
-                <li>Diversify your stable with different rarities, the rarer the pony the better their stats, backstory and fun facts</li>
-            </ul>
+        <section id="market" class="page">
+            <h2>Market</h2>
+            <p>Browse and trade horses in the market.</p>
         </section>
-        <section id="support-subscribe">
-            <div id="support">
-                <h3>Support the Game</h3>
-                <p>Love Celestial Herds? Consider supporting us to help keep the magic alive!</p>
-                <a href="#" class="button" id="donate-button">Donate</a>
-            </div>
-            <div id="subscribe">
-                <h3>Subscribe for Premium Benefits</h3>
-                <p>Unlock exclusive horses, special events, and more with our premium subscription!</p>
-                <a href="#" class="button" id="subscribe-button">Subscribe Now</a>
-            </div>
+        <section id="messages" class="page">
+            <h2>Messages</h2>
+            <p>Your inbox and communication center.</p>
+        </section>
+        <section id="profile" class="page">
+            <h2>Profile</h2>
+            <p>View and edit your profile information.</p>
+        </section>
+        <section id="lore" class="page">
+            <h2>Lore</h2>
+            <p>Discover the rich history and lore of Celestial Herds.</p>
         </section>
     </main>
     <footer>
