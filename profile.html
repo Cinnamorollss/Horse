@@ -61,16 +61,18 @@
         <div id="edit-form" style="display: none;">
             <h3>Edit Profile</h3>
             <form id="profile-form">
+                <!-- Favorite Horse Breed options updated -->
                 <label for="edit-fav-horse-breed">Favorite Horse Breed:</label>
                 <select id="edit-fav-horse-breed" required>
                     <option value="">Select a breed</option>
                     <option value="Pegasus">Pegasus</option>
-                    <option value="Unicorn">Unicorn</option>
-                    <option value="Kelpie">Kelpie</option>
-                    <option value="Sleipnir">Sleipnir</option>
-                    <!-- Add more horse breeds from your game here -->
+                    <option value="Floralquin">Floralquin</option>
+                    <option value="Wraithsteeds">Wraithsteeds</option>
+                    <option value="Nebulamane">Nebulamane</option>
+                    <option value="Nocturne">Nocturne</option>
                 </select>
 
+                <!-- Pronouns, Country, and Description fields -->
                 <label for="edit-pronouns">Pronouns:</label>
                 <input type="text" id="edit-pronouns" required>
 
@@ -80,6 +82,7 @@
                 <label for="edit-description">Description:</label>
                 <textarea id="edit-description" rows="4" required></textarea>
 
+                <!-- Save and Cancel buttons -->
                 <button type="submit">Save Changes</button>
                 <button type="button" id="cancel-edit">Cancel</button>
             </form>
