@@ -113,3 +113,37 @@ button:disabled {
     background-color: #a1887f;
     cursor: not-allowed;
 }
+
+/* Styles from market.css */
+.breed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.breed-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.breed-card:hover {
+    transform: translateY(-5px);
+}
+
+.breed-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.breed-card p {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-weight: bold;
+    color: #4a2c2a;
+}
