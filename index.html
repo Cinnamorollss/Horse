@@ -3,17 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celestial Herds</title>
+    <title>Home - Fantasy Horse Reality</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <h1>Celestial Herds</h1>
-        <div class="user-info">
-            <!-- User info will be populated by JavaScript -->
-        </div>
-    </header>
+    <!-- The header will be inserted here by JavaScript -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -21,53 +15,27 @@
             <li><a href="market.html">Market</a></li>
             <li><a href="messages.html">Messages</a></li>
             <li><a href="profile.html">Profile</a></li>
-            <li><a href="lore.html">Lore</a></li>
         </ul>
     </nav>
     <main>
-        <section id="game-intro">
-            <img src="https://cdn.leonardo.ai/users/1fff0d16-fdc3-46a3-b77d-51d51260dced/generations/2768765a-6fe0-4691-bef7-8eacff6b8efa/Leonardo_Phoenix_oil_painting_of_a_horse_on_canvas_in_the_styl_0.jpg" alt="Majestic fantasy horse" class="main-image">
-            <h2>Welcome to Celestial Herds</h2>
-            <p>Embark on a magical journey where you can breed, train, and care for mythical horses. Create your own legendary stable and compete with players from around the world!</p>
-        </section>
-
-        <section id="game-features">
-            <h3>Game Features</h3>
-            <ul>
-                <li>Breed and raise mythical horses like Unicorns, Pegasi, and Kelpies</li>
-                <li>Train your horses and compete in magical races and tournaments</li>
-                <li>Trade horses with other players in the global market</li>
-                <li>Customize your stable and horses with unique accessories</li>
-            </ul>
-        </section>
-
-        <section id="tips-tricks">
-            <h3>Tips & Tricks</h3>
-            <ul>
-                <li>Visit your stable daily to bond with your horses and increase their stats</li>
-                <li>Participate in daily quests to earn extra rewards</li>
-                <li>Join a guild to access exclusive content and get help from experienced players</li>
-                <li>Diversify your stable with different breeds to excel in various competitions</li>
-            </ul>
-        </section>
-
-        <section id="support-subscribe">
-            <div id="support">
-                <h3>Support the Game</h3>
-                <p>Love Celestial Herds? Consider supporting us to help keep the magic alive!</p>
-                <a href="support.html" class="button">Donate</a>
-            </div>
-            <div id="subscribe">
-                <h3>Subscribe for Premium Benefits</h3>
-                <p>Unlock exclusive horses, special events, and more with our premium subscription!</p>
-                <a href="#" class="button" id="subscribe-button">Subscribe Now</a>
-            </div>
-        </section>
+        <h2>Your Stable</h2>
+        <div id="horse-list">
+            <!-- Horse list will be dynamically populated here -->
+        </div>
+        <button id="breed-btn">Breed Horses</button>
+        <button id="train-btn">Train Horses</button>
     </main>
+    <div id="train-modal" class="modal">
+        <div class="modal-content">
+            <h3>Select a horse to train</h3>
+            <div id="train-horse-list"></div>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
     <footer>
         &copy; 2024 Celestial Herds. All rights reserved.
     </footer>
-    <script src="index.js"></script>
     <script src="header.js"></script>
+    <script src="stable.js"></script>
 </body>
 </html>
