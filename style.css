@@ -55,6 +55,61 @@ button {
 }
 button:hover {
     background-color: #8d6e63;
+}
 
-    //kys jada LOL
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #8d6e63;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#train-horse-list div {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    border: 1px solid #6d4c41;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#train-horse-list div:hover {
+    background-color: #e0e0e0;
+}
+
+#close-modal {
+    background-color: #4a2c2a;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    cursor: pointer;
+    float: right;
+}
+
+#close-modal:hover {
+    background-color: #6d4c41;
+}
+
+/* New style for disabled button */
+button:disabled {
+    background-color: #a1887f;
+    cursor: not-allowed;
 }
