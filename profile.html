@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Fantasy Horse Reality</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #user-info p {
+            margin: 10px 0;
+        }
+        #edit-form {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        #edit-form label {
+            display: block;
+            margin-top: 10px;
+        }
+        #edit-form input, #edit-form select, #edit-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        #edit-form button {
+            margin-top: 15px;
+            padding: 10px 15px;
+        }
+        #edit-form textarea {
+            resize: vertical;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -30,9 +61,6 @@
         <div id="edit-form" style="display: none;">
             <h3>Edit Profile</h3>
             <form id="profile-form">
-                <label for="edit-account-created">Account Created:</label>
-                <input type="date" id="edit-account-created" required><br>
-
                 <label for="edit-fav-horse-breed">Favorite Horse Breed:</label>
                 <select id="edit-fav-horse-breed" required>
                     <option value="">Select a breed</option>
@@ -41,16 +69,16 @@
                     <option value="Kelpie">Kelpie</option>
                     <option value="Sleipnir">Sleipnir</option>
                     <!-- Add more horse breeds from your game here -->
-                </select><br>
+                </select>
 
                 <label for="edit-pronouns">Pronouns:</label>
-                <input type="text" id="edit-pronouns" required><br>
+                <input type="text" id="edit-pronouns" required>
 
                 <label for="edit-country">Country:</label>
-                <input type="text" id="edit-country" required><br>
+                <input type="text" id="edit-country" required>
 
                 <label for="edit-description">Description:</label>
-                <textarea id="edit-description" rows="4" required></textarea><br>
+                <textarea id="edit-description" rows="4" required></textarea>
 
                 <button type="submit">Save Changes</button>
                 <button type="button" id="cancel-edit">Cancel</button>
