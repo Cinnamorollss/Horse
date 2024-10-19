@@ -1,0 +1,51 @@
+.lore-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.lore-card-header {
+    background-color: #4a2c2a;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lore-card-header h3 {
+    margin: 0;
+}
+
+.lore-card-content {
+    padding: 20px;
+    display: none;
+}
+
+.lore-card-content.active {
+    display: block;
+}
+
+.lore-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.lore-card-content h4 {
+    color: #4a2c2a;
+    margin-top: 0;
+}
+
+.lore-card-content ul {
+    padding-left: 20px;
+}
+
+.toggle-icon {
+    font-size: 24px;
+}
