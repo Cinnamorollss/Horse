@@ -109,3 +109,21 @@ document.addEventListener('DOMContentLoaded', () => {
         <p class="currency">In-Game: ${user.inGameCurrency}</p>
     `;
 });
+// market.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ... existing code ...
+
+    // Function to reset the market
+    function resetMarket() {
+        // Logic to reset the market and fetch new ponies
+        console.log("Market has been reset!");
+        // Call your function to fetch new ponies here, e.g., fetchNewPonies();
+    }
+
+    // Set timer for market reset (10 seconds for demo; change as needed)
+    setInterval(resetMarket, 10000); // 10000 ms = 10 seconds
+
+    // Initial market setup
+    resetMarket(); // Call once on load
+});
