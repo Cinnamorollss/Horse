@@ -158,3 +158,9 @@ footer {
         flex-direction: column;
     }
 }
+.currency-icon {
+    width: 24px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align with text */
+    margin-right: 5px; /* Space between icon and text */
+}
