@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             funFacts: [
                 "Pegasus are known to collect feathers from other birds and use them as fashion accessories",
                 "The connection between Pegasus and angels is so profound that when they bond with an angel, it lasts a lifetime.",
-                "Their favourite is the Watermelon."
+                "Their favourite fruit is the Watermelon."
             ]
         },
         {
@@ -44,6 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 "They often have midnight gallops, leaving trails of shimmering light in their wake that look like falling stars."
             ]
         },
+         {
+            name: "Nebulamane",
+            backstory: "ebulamane are not ordinary horses; they are born from the final breaths of dying stars, each embodying the essence of the universe's most luminous wonders. From this cosmic dust, Nebulamane are formed, infused with the remnants of starlight and energy, each horse uniquely reflecting the characteristics of the star from which it originated.",
+            abilities: [
+                "Starwhisper Communication",
+                "Cosmic Resilience",
+                "Stellar Illumination"
+            ],
+            funFacts: [
+                "Nebulamane participate in a ritual known as the Star Song, where they gather together to sing their cosmic melodies.",
+                "Nebulamane are known to weave dreams for mortals.",
+                "When a shooting star is seen in the sky, it’s actually a Nebulamane galloping across the cosmos, bringing wishes from the stars."
         // Add more breeds as needed
     ];
 
