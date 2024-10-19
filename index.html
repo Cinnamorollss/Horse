@@ -51,7 +51,34 @@
         </section>
         <section id="market" class="page">
             <h2>Market</h2>
-            <p>Browse and trade horses in the market.</p>
+            <p>Browse and trade horses in the Celestial Herds market.</p>
+            <div class="market-filters">
+                <h3>Filters</h3>
+                <form id="market-filter-form">
+                    <label for="breed">Breed:</label>
+                    <select id="breed" name="breed">
+                        <option value="">All Breeds</option>
+                        <option value="unicorn">Unicorn</option>
+                        <option value="pegasus">Pegasus</option>
+                        <option value="alicorn">Alicorn</option>
+                    </select>
+                    <label for="rarity">Rarity:</label>
+                    <select id="rarity" name="rarity">
+                        <option value="">All Rarities</option>
+                        <option value="common">Common</option>
+                        <option value="rare">Rare</option>
+                        <option value="epic">Epic</option>
+                        <option value="legendary">Legendary</option>
+                    </select>
+                    <button type="submit">Apply Filters</button>
+                </form>
+            </div>
+            <div id="market-listings">
+                <!-- Market listings will be populated by JavaScript -->
+            </div>
+            <div id="market-pagination">
+                <!-- Pagination controls will be added here -->
+            </div>
         </section>
         <section id="messages" class="page">
             <h2>Messages</h2>
