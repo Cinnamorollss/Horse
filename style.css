@@ -33,7 +33,7 @@ h1 {
 
 #currency-display {
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
 
 .currency {
@@ -42,8 +42,10 @@ h1 {
 }
 
 .currency-icon {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    vertical-align: middle;
     margin-right: 5px;
 }
 
@@ -136,6 +138,14 @@ footer {
     margin-top: 20px;
 }
 
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -157,10 +167,4 @@ footer {
     #support-subscribe {
         flex-direction: column;
     }
-.currency-icon {
-    width: 24px; /* Set a fixed width */
-    height: 24px; /* Set a fixed height to match width */
-    object-fit: contain; /* Ensure the image fits within the dimensions */
-    vertical-align: middle; /* Align with text */
-    margin-right: 5px; /* Space between icon and text */
 }
