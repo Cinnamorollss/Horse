@@ -10,5 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     </header>
     `;
 
-    document.body.insertAdjacentHTML('afterbegin', headerHTML);
+    // Check if the header already exists
+    if (!document.querySelector('header')) {
+        document.body.insertAdjacentHTML('afterbegin', headerHTML);
+    }
 });
