@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Celestial Herds</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .currency-icon {
+            width: 20px;
+            height: auto;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Celestial Herds</h1>
         <div id="currency-display">
-            <!-- Currency will be displayed here -->
+            <img src="assets/radiant_icon.png" alt="Radiant Icon" class="currency-icon">
+            <span id="radiant-amount">Radiant: 0</span>
+            <img src="assets/fluttergem_icon.png" alt="Fluttergem Icon" class="currency-icon">
+            <span id="fluttergem-amount">Fluttergem: 0</span>
         </div>
         <div class="user-info">
             <!-- User info will be populated by JavaScript -->
@@ -27,21 +38,11 @@
         </ul>
     </nav>
     <main id="main-content">
-        <!-- Main game content will be loaded here -->
-    </main>
-    <footer>
-        <p>&copy; 2024 Celestial Herds. All rights reserved.</p>
-    </footer>
-    <script src="currencyDB.js" type="module"></script>
-    <script src="index.js" type="module"></script>
-</body>
-</html>
-        <section id="game-intro">
-            <img src="https://cdn.leonardo.ai/users/1fff0d16-fdc3-46a3-b77d-51d51260dced/generations/2768765a-6fe0-4691-bef7-8eacff6b8efa/Leonardo_Phoenix_oil_painting_of_a_horse_on_canvas_in_the_styl_0.jpg" alt="Majestic fantasy horse" class="main-image">
-            <h2>Welcome to Fantasy Horse Reality</h2>
+        <section id="home" class="page">
+            <h2>Welcome to Celestial Herds</h2>
+            <img src="https://cdn.leonardo.ai/users/1fff0d16-fdc3-46a3-b77d-51d51260dced/generations/2768765a-6fe0-4691-bef7-8eacff6b8efa/Leonardo_Phoenix_oil_painting_of_a_horse_on_canvas_in_the_styl_0.jpg" alt="Celestial Horse" class="main-image">
             <p>Embark on a magical journey where you can breed, train, and care for mythical horses. Create your own legendary stable and compete with players from around the world!</p>
         </section>
-
         <section id="game-features">
             <h3>Game Features</h3>
             <ul>
@@ -51,7 +52,6 @@
                 <li>Customize your stable and horses with unique accessories</li>
             </ul>
         </section>
-
         <section id="tips-tricks">
             <h3>Tips & Tricks</h3>
             <ul>
@@ -61,12 +61,11 @@
                 <li>Diversify your stable with different breeds to excel in various competitions</li>
             </ul>
         </section>
-
         <section id="support-subscribe">
             <div id="support">
                 <h3>Support the Game</h3>
-                <p>Love Fantasy Horse Reality? Consider supporting us to help keep the magic alive!</p>
-                <a href="support.html" class="button">Donate</a>
+                <p>Love Celestial Herds? Consider supporting us to help keep the magic alive!</p>
+                <a href="#" class="button" id="donate-button">Donate</a>
             </div>
             <div id="subscribe">
                 <h3>Subscribe for Premium Benefits</h3>
@@ -76,9 +75,9 @@
         </section>
     </main>
     <footer>
-        &copy; 2024 Fantasy Horse Reality. All rights reserved.
+        <p>&copy; 2024 Celestial Herds. All rights reserved.</p>
     </footer>
-    <script src="header.js"></script>
-    <script src="index.js"></script>
+    <script src="currencyDB.js" type="module"></script>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
