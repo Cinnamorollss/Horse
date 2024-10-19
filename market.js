@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             name: "Starlight",
             breed: "Unicorn",
+            rarity: "Rare",
             image: "images/unicorn.jpg",
             backstory: "Born from a shooting star, Starlight possesses the power to grant wishes to those pure of heart.",
             funFacts: [
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 2,
             name: "Zephyr",
             breed: "Pegasus",
+            rarity: "Uncommon",
             image: "images/pegasus.jpg",
             backstory: "Zephyr was hatched from a cloud during a thunderstorm, giving him the ability to control winds.",
             funFacts: [
@@ -35,6 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Zephyr enjoys racing against eagles for fun"
             ],
             price: 1200
+        },
+        {
+            id: 3,
+            name: "Shadowmist",
+            breed: "Nightmare",
+            rarity: "Very Rare",
+            image: "images/nightmare.jpg",
+            backstory: "Shadowmist emerged from the depths of a forgotten cave, bringing with her the power to traverse the realm of dreams.",
+            funFacts: [
+                "Shadowmist's mane is made of living shadows",
+                "She can turn invisible under the light of a full moon",
+                "Shadowmist feeds on the fears of her riders, turning them into courage"
+            ],
+            price: 2000
         },
         // Add more horses as needed
     ];
@@ -45,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         horseCard.className = 'horse-card';
         horseCard.innerHTML = `
             <img src="${horse.image}" alt="${horse.name}">
-            <p>${horse.name} (${horse.breed})</p>
+            <p>${horse.name} (${horse.rarity})</p>
         `;
         horseCard.addEventListener('click', () => showHorseDetails(horse));
         marketGrid.appendChild(horseCard);
@@ -53,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Show horse details in modal
     function showHorseDetails(horse) {
-        modalHorseName.textContent = `${horse.name} (${horse.breed})`;
+        modalHorseName.textContent = `${horse.name} (${horse.rarity})`;
         modalHorseImage.src = horse.image;
         modalHorseImage.alt = horse.name;
         modalHorseBackstory.textContent = horse.backstory;
