@@ -21,3 +21,37 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Thank you for your interest in subscribing! This feature is coming soon.');
     });
 });
+
+import * as CurrencyDB from './currencyDB.js';
+
+async function initializeApp() {
+    try {
+        await CurrencyDB.initDB();
+        console.log("Database initialized successfully");
+
+        // Example usage:
+        const userId = "user123"; // This should be the logged-in user's ID
+
+        // Set initial currency (if not already set)
+        await CurrencyDB.updateCurrency(userId, 1000, 10);
+
+        // Get current currency
+        let currency = await CurrencyDB.getCurrency(userId);
+        console.log("Current currency:", currency);
+
+        // Add some Radiant
+        await CurrencyDB.addCurrency(userId, 500, 0);
+        currency = await CurrencyDB.getCurrency(userId);
+        console.log("After adding 500 Radiant:", currency);
+
+        // Subtract some Fluttergem
+        await CurrencyDB.subtractCurrency(userId, 0, 5);
+        currency = await CurrencyDB.getCurrency(userId);
+        console.log("After subtracting 5 Fluttergem:", currency);
+
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+initializeApp();
