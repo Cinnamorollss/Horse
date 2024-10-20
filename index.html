@@ -8,95 +8,74 @@
 </head>
 <body>
     <header>
-        <h1><a href="#home" data-page="home">Celestial Herds</a></h1>
-        <div id="currency-display">
-            <div class="currency">
-                <img src="https://i.imgur.com/6egfuCc.png" alt="Radiant Icon" class="currency-icon">
-                <span id="radiant-amount">0</span>
-            </div>
-            <div class="currency">
-                <img src="https://i.imgur.com/m79ltif.png" alt="Fluttergem Icon" class="currency-icon">
-                <span id="fluttergem-amount">0</span>
-            </div>
-        </div>
-        <div class="user-info">
-            <!-- User info will be populated by JavaScript -->
-        </div>
+        <h1>Celestial Herds</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#marketplace">Marketplace</a></li>
+                <li><a href="#stable">My Stable</a></li>
+                <li><a href="#breeding">Breeding</a></li>
+                <li><a href="#competitions">Competitions</a></li>
+                <li><a href="#lore">Lore</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#jobs" data-page="jobs">Jobs</a></li>
-            <li><a href="#stable" data-page="stable">Stable</a></li>
-            <li><a href="#market" data-page="market">Market</a></li>
-            <li><a href="#messages" data-page="messages">Messages</a></li>
-            <li><a href="#profile" data-page="profile">Profile</a></li>
-            <li><a href="#lore" data-page="lore">Lore</a></li>
-        </ul>
-    </nav>
-    <main id="main-content">
-        <section id="home" class="page active">
-            <h2>Welcome to Celestial Herds</h2>
-            <img src="https://cdn.leonardo.ai/users/1fff0d16-fdc3-46a3-b77d-51d51260dced/generations/2768765a-6fe0-4691-bef7-8eacff6b8efa/Leonardo_Phoenix_oil_painting_of_a_horse_on_canvas_in_the_styl_0.jpg" alt="Celestial Horse" class="main-image">
-            <p>Embark on a magical journey where you can breed, train, and care for mythical horses. Create your own legendary stable and compete with players from around the world!</p>
-            <!-- Rest of the home content -->
+
+    <main>
+        <section id="hero">
+            <img src="https://i.imgur.com/AoPkfCr.png" alt="Celestial Herds Hero Image" class="hero-image">
+            <h2>Welcome to Celestial Herds!</h2>
+            <p>Discover, Breed, and Trade Unique Ponies in a Magical World</p>
         </section>
-        <section id="jobs" class="page">
-            <h2>Jobs</h2>
-            <p>Complete jobs to earn rewards and advance your stable.</p>
-            <!-- Add job listings and related content here -->
+
+        <section id="introduction">
+            <p>Step into the enchanting world of Celestial Herds, where you can immerse yourself in a vibrant community of ponies with rich lore, unique traits, and endless possibilities! Whether you're a collector, breeder, or adventurer, Celestial Herds offers exciting ways to build your dream pony collection.</p>
         </section>
-        <section id="stable" class="page">
-            <h2>Stable</h2>
-            <p>Welcome to your stable. Here you can manage your horses.</p>
-        </section>
-        <section id="market" class="page">
-            <h2>Market</h2>
-            <p>Browse and trade horses in the Celestial Herds market.</p>
-            <div class="market-filters">
-                <h3>Filters</h3>
-                <form id="market-filter-form">
-                    <label for="breed">Breed:</label>
-                    <select id="breed" name="breed">
-                        <option value="">All Breeds</option>
-                        <option value="unicorn">Unicorn</option>
-                        <option value="pegasus">Pegasus</option>
-                        <option value="alicorn">Alicorn</option>
-                    </select>
-                    <label for="rarity">Rarity:</label>
-                    <select id="rarity" name="rarity">
-                        <option value="">All Rarities</option>
-                        <option value="common">Common</option>
-                        <option value="rare">Rare</option>
-                        <option value="epic">Epic</option>
-                        <option value="legendary">Legendary</option>
-                    </select>
-                    <button type="submit">Apply Filters</button>
-                </form>
+
+        <section id="key-features">
+            <h3>Key Features</h3>
+            <div class="feature">
+                <h4>Breed, Buy, and Sell Ponies</h4>
+                <p>Grow your stable by breeding ponies with special traits, buying from the daily randomized marketplace, or selling and trading with other users.</p>
             </div>
-            <div id="market-listings">
-                <!-- Market listings will be populated by JavaScript -->
+            <div class="feature">
+                <h4>Train and Compete</h4>
+                <p>Enhance your ponies' skills through training, then test their abilities in competitions to earn rewards and climb the leaderboards.</p>
             </div>
-            <div id="market-pagination">
-                <!-- Pagination controls will be added here -->
+            <div class="feature">
+                <h4>Explore Pony Lore</h4>
+                <p>Every pony has a unique story waiting to be uncovered. Dive into the lore of individual ponies and unlock the secrets of their origins and magical powers.</p>
+            </div>
+            <div class="feature">
+                <h4>Daily Market Resets</h4>
+                <p>The marketplace refreshes daily with a randomized selection of ponies and items. No two markets are alike, offering you endless variety and opportunities to discover rare finds.</p>
+            </div>
+            <div class="feature">
+                <h4>Rarity System</h4>
+                <p>Ponies come in various rarities—Ordinary, Common, Uncommon, Rare, Very Rare, Extremely Rare, and the coveted Mythic ponies. Can you collect them all?</p>
+            </div>
+            <div class="feature">
+                <h4>Seasonal Ponies</h4>
+                <p>Keep an eye out for limited-time Seasonal Ponies! These exclusive ponies are only available during certain events, and once the season ends, they can only be acquired through trading or buying from other players.</p>
+            </div>
+            <div class="feature">
+                <h4>Quests and Jobs</h4>
+                <p>Earn money and items by sending your ponies on quests or jobs. Whether it's a simple task or a grand adventure, each job brings you closer to upgrading your stable and uncovering more of Celestial Herds' mysteries.</p>
+            </div>
+            <div class="feature">
+                <h4>Compete and Trade</h4>
+                <p>Challenge other players in friendly competition or engage in the bustling trade economy to build your perfect herd of ponies.</p>
             </div>
         </section>
-        <section id="messages" class="page">
-            <h2>Messages</h2>
-            <p>Your inbox and communication center.</p>
-        </section>
-        <section id="profile" class="page">
-            <h2>Profile</h2>
-            <p>View and edit your profile information.</p>
-        </section>
-        <section id="lore" class="page">
-            <h2>Lore</h2>
-            <p>Discover the rich history and lore of Celestial Herds.</p>
+
+        <section id="cta">
+            <h3>Join us in Celestial Herds and experience a world full of adventure, creativity, and endless possibilities!</h3>
+            <a href="#signup" class="cta-button">Start Your Adventure</a>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Celestial Herds. All rights reserved.</p>
     </footer>
-    <script src="currencyDB.js" type="module"></script>
-    <script src="index.js" type="module"></script>
 </body>
 </html>
