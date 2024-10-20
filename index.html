@@ -18,12 +18,15 @@
                 <li><a href="breeding.html">Breeding</a></li>
                 <li><a href="competitions.html">Competitions</a></li>
                 <li><a href="lore.html">Lore</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <div class="centered-content">
+            <div id="userInfo"></div>
+
             <section id="hero">
                 <img src="https://i.imgur.com/AoPkfCr.png" alt="Celestial Herds Hero Image" class="hero-image">
                 <h2>Welcome to Celestial Herds!</h2>
@@ -45,7 +48,7 @@
 
             <section id="cta">
                 <h3>Join us in Celestial Herds and experience a world full of adventure, creativity, and endless possibilities!</h3>
-                <a href="#signup" class="cta-button">Start Your Adventure</a>
+                <a href="signup.html" class="cta-button">Start Your Adventure</a>
             </section>
         </div>
     </main>
@@ -53,5 +56,22 @@
     <footer>
         <p>&copy; 2024 Celestial Herds. All rights reserved.</p>
     </footer>
+
+    <script>
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (currentUser) {
+            document.getElementById('userInfo').innerHTML = `
+                <h3>Welcome, ${currentUser.username}!</h3>
+                <p>Radiant: ${currentUser.radiant}</p>
+                <p>Fluttergems: ${currentUser.fluttergems}</p>
+                <button onclick="editProfile()">Edit Profile</button>
+            `;
+        }
+
+        function editProfile() {
+            // Implement profile editing logic here
+            console.log('Edit profile clicked');
+        }
+    </script>
 </body>
 </html>
