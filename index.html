@@ -78,21 +78,27 @@
                 <span>Fluttergems: ${currentUser.fluttergems}</span>
             `;
 
-            // Update main content user info
-            userInfoSection.innerHTML = `
-                <h3>Welcome, ${currentUser.username}!</h3>
-                <p>Radiant: ${currentUser.radiant}</p>
-                <p>Fluttergems: ${currentUser.fluttergems}</p>
-                <button onclick="editProfile()">Edit Profile</button>
-            `;
+            // Check if the user is newly signed up
+            if (currentUser.isNewUser) {
+                userInfoSection.innerHTML = `
+                    <h3>Welcome, ${currentUser.username}!</h3>
+                    <p>We've given you 10,000 Radiant and 20 Fluttergems to get you started!</p>
+                    <p>You can check out the Market, edit your profile or read on the lore! Have fun and enjoy your stay :)</p>
+                `;
+                // Remove the isNewUser flag so this message doesn't show again
+                currentUser.isNewUser = false;
+                localStorage.setItem('currentUser', JSON.stringify(currentUser));
+            } else {
+                // Regular user info display
+                userInfoSection.innerHTML = `
+                    <h3>Welcome back, ${currentUser.username}!</h3>
+                    <p>Radiant: ${currentUser.radiant}</p>
+                    <p>Fluttergems: ${currentUser.fluttergems}</p>
+                `;
+            }
         } else {
             userHeaderInfo.style.display = 'none';
             userInfoSection.style.display = 'none';
-        }
-
-        function editProfile() {
-            // Implement profile editing logic here
-            console.log('Edit profile clicked');
         }
     </script>
 </body>
