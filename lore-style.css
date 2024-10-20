@@ -1,0 +1,85 @@
+body {
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    background-image: url('https://i.imgur.com/IKOPEHv.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    color: #2c3e50;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.lore-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.lore-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.lore-text {
+    text-align: justify;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3a0ca3;
+}
+
+h3 {
+    color: #4361ee;
+    margin-top: 30px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .lore-content {
+        padding: 10px;
+    }
+}
