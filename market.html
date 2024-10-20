@@ -3,48 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market - Fantasy Horse Reality</title>
+    <title>Celestial Herds - Marketplace</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="market.css">
 </head>
 <body>
     <header>
-        <h1>Fantasy Horse Reality</h1>
-        <div class="user-info">
-            <!-- User info will be populated by JavaScript -->
-        </div>
+        <h1>Celestial Herds</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="stable.html">My Stable</a></li>
+                <li><a href="breeding.html">Breeding</a></li>
+                <li><a href="competitions.html">Competitions</a></li>
+                <li><a href="lore.html">Lore</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="stable.html">Stable</a></li>
-            <li><a href="market.html">Market</a></li>
-            <li><a href="messages.html">Messages</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="lore.html">Lore</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h2>Horse Market</h2>
-        <div id="market-grid" class="market-grid">
-            <!-- Horse cards will be dynamically populated here -->
-        </div>
+
+    <main id="marketplace">
+        <h2>Celestial Herds Marketplace</h2>
+
+        <section id="daily-market">
+            <h3>Daily Market</h3>
+            <p>New ponies available every day at midnight UTC. Don't miss out on these unique offerings!</p>
+            
+            <div class="market-filters">
+                <label for="daily-rarity-filter">Filter by Rarity:</label>
+                <select id="daily-rarity-filter">
+                    <option value="all">All Rarities</option>
+                    <option value="ordinary">Ordinary</option>
+                    <option value="common">Common</option>
+                    <option value="uncommon">Uncommon</option>
+                    <option value="rare">Rare</option>
+                    <option value="very-rare">Very Rare</option>
+                    <option value="extremely-rare">Extremely Rare</option>
+                    <option value="mythic">Mythic</option>
+                </select>
+            </div>
+
+            <div id="daily-pony-listings" class="pony-listings">
+                <!-- Daily market pony listings will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="user-market">
+            <h3>User Listings</h3>
+            <p>Browse ponies for sale from other players. Find your perfect match!</p>
+            
+            <div class="market-filters">
+                <label for="user-rarity-filter">Filter by Rarity:</label>
+                <select id="user-rarity-filter">
+                    <option value="all">All Rarities</option>
+                    <option value="ordinary">Ordinary</option>
+                    <option value="common">Common</option>
+                    <option value="uncommon">Uncommon</option>
+                    <option value="rare">Rare</option>
+                    <option value="very-rare">Very Rare</option>
+                    <option value="extremely-rare">Extremely Rare</option>
+                    <option value="mythic">Mythic</option>
+                </select>
+
+                <label for="user-price-filter">Sort by Price:</label>
+                <select id="user-price-filter">
+                    <option value="low-to-high">Low to High</option>
+                    <option value="high-to-low">High to Low</option>
+                </select>
+            </div>
+
+            <div id="user-pony-listings" class="pony-listings">
+                <!-- User-listed pony listings will be dynamically inserted here -->
+            </div>
+        </section>
     </main>
-    <div id="horse-details-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="modal-horse-name"></h2>
-            <img id="modal-horse-image" src="" alt="">
-            <h3>Backstory</h3>
-            <p id="modal-horse-backstory"></p>
-            <h3>Fun Facts</h3>
-            <ul id="modal-horse-facts"></ul>
-            <button id="purchase-button">Purchase</button>
-        </div>
-    </div>
+
     <footer>
-        &copy; 2024 Fantasy Horse Reality. All rights reserved.
+        <p>&copy; 2024 Celestial Herds. All rights reserved.</p>
     </footer>
-    <script src="market.js"></script>
+
+    <script src="marketplace.js"></script>
 </body>
 </html>
