@@ -10,7 +10,8 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
         username: username,
         email: email,
         radiant: 10000,
-        fluttergems: 20
+        fluttergems: 20,
+        isNewUser: true  // Add this flag
     };
     
     // Store user data in localStorage
