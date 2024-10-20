@@ -228,3 +228,48 @@ footer {
 .lore-text p {
     margin-bottom: 15px;
 }
+#profile-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#profile-picture-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profile-picture {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#profile-picture-input {
+    display: none;
+}
+
+#change-picture-btn {
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#change-picture-btn:hover {
+    background-color: #7b1fa2;
+}
+
+#profile-details {
+    text-align: left;
+}
+
+#profile-details p {
+    margin-bottom: 10px;
+}
