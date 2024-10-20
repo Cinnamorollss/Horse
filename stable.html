@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stable - Celestial Herds</title>
+    <title>Celestial Herds - My Stable</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <script src="stable-script.js" defer></script>
 </head>
 <body>
     <header>
@@ -24,28 +25,32 @@
 
     <main>
         <div class="centered-content">
-            <h2>Your Stable</h2>
-            <div id="horse-list">
-                <!-- Horse list will be dynamically populated here -->
+            <h2>My Stable</h2>
+            <div id="pony-grid">
+                <!-- Pony cards will be dynamically inserted here -->
             </div>
-            <button id="breed-btn">Breed Horses</button>
-            <button id="train-btn">Train Horses</button>
         </div>
     </main>
 
-    <div id="train-modal" class="modal">
+    <div id="pony-detail-modal" class="modal">
         <div class="modal-content">
-            <h3>Select a horse to train</h3>
-            <div id="train-horse-list"></div>
-            <button id="close-modal">Close</button>
+            <span id="close-modal">&times;</span>
+            <h3 id="pony-name"></h3>
+            <img id="pony-image" src="" alt="Pony Image">
+            <div id="pony-stats">
+                <!-- Pony stats will be inserted here -->
+            </div>
+            <div id="pony-actions">
+                <button id="edit-pony">Edit</button>
+                <button id="train-pony">Train</button>
+                <button id="feed-pony">Feed</button>
+                <button id="play-pony">Play</button>
+            </div>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2024 Celestial Herds. All rights reserved.</p>
     </footer>
-
-    <script src="header.js"></script>
-    <script src="stable.js"></script>
 </body>
 </html>
