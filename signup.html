@@ -5,18 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Celestial Herds - Sign Up</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="centered-content">
-        <h2>Sign Up for Celestial Herds</h2>
-        <form id="signupForm">
-            <input type="text" id="username" placeholder="Username" required>
-            <span id="usernameError" class="error"></span>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Sign Up</button>
-        </form>
-    </div>
+    <header>
+        <h1>Celestial Herds</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="market.html">Marketplace</a></li>
+                <li><a href="stable.html">My Stable</a></li>
+                <li><a href="breeding.html">Breeding</a></li>
+                <li><a href="competitions.html">Competitions</a></li>
+                <li><a href="lore.html">Lore</a></li>
+                <li id="auth-link"><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="centered-content">
+            <h2>Sign Up for Celestial Herds</h2>
+            <form id="signupForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit" class="cta-button">Sign Up</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Celestial Herds. All rights reserved.</p>
+    </footer>
+
     <script src="signup.js"></script>
 </body>
 </html>
