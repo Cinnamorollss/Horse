@@ -18,9 +18,10 @@
                 <li><a href="breeding.html">Breeding</a></li>
                 <li><a href="competitions.html">Competitions</a></li>
                 <li><a href="lore.html">Lore</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
+                <li id="auth-link"><a href="signup.html">Sign Up</a></li>
             </ul>
         </nav>
+        <div id="user-header-info"></div>
     </header>
 
     <main>
@@ -64,13 +65,29 @@
 
     <script>
         const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        const authLink = document.getElementById('auth-link');
+        const userHeaderInfo = document.getElementById('user-header-info');
+        const userInfoSection = document.getElementById('userInfo');
+
         if (currentUser) {
-            document.getElementById('userInfo').innerHTML = `
+            // Update header
+            authLink.innerHTML = '<a href="profile.html">Profile</a>';
+            userHeaderInfo.innerHTML = `
+                <span>${currentUser.username}</span>
+                <span>Radiant: ${currentUser.radiant}</span>
+                <span>Fluttergems: ${currentUser.fluttergems}</span>
+            `;
+
+            // Update main content user info
+            userInfoSection.innerHTML = `
                 <h3>Welcome, ${currentUser.username}!</h3>
                 <p>Radiant: ${currentUser.radiant}</p>
                 <p>Fluttergems: ${currentUser.fluttergems}</p>
                 <button onclick="editProfile()">Edit Profile</button>
             `;
+        } else {
+            userHeaderInfo.style.display = 'none';
+            userInfoSection.style.display = 'none';
         }
 
         function editProfile() {
