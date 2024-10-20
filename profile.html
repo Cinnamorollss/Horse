@@ -29,7 +29,18 @@
             <section id="profile">
                 <h2>Your Profile</h2>
                 <div id="profile-info">
-                    <!-- Profile information will be inserted here by JavaScript -->
+                    <div id="profile-picture-container">
+                        <img id="profile-picture" src="default-profile.png" alt="Profile Picture">
+                        <input type="file" id="profile-picture-input" accept="image/*">
+                        <button id="change-picture-btn">Change Picture</button>
+                    </div>
+                    <div id="profile-details">
+                        <p><strong>Username:</strong> <span id="profile-username"></span></p>
+                        <p><strong>Pronouns:</strong> <span id="profile-pronouns"></span></p>
+                        <p><strong>Region:</strong> <span id="profile-region"></span></p>
+                        <p><strong>Description:</strong> <span id="profile-description"></span></p>
+                        <p><strong>Account Created:</strong> <span id="profile-created"></span></p>
+                    </div>
                 </div>
                 <button id="edit-profile-btn" class="cta-button">Edit Profile</button>
             </section>
@@ -40,33 +51,6 @@
         <p>&copy; 2024 Celestial Herds. All rights reserved.</p>
     </footer>
 
-    <script>
-        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        const userHeaderInfo = document.getElementById('user-header-info');
-        const profileInfo = document.getElementById('profile-info');
-        const editProfileBtn = document.getElementById('edit-profile-btn');
-
-        if (currentUser) {
-            userHeaderInfo.innerHTML = `
-                <span>${currentUser.username}</span>
-                <span>Radiant: ${currentUser.radiant}</span>
-                <span>Fluttergems: ${currentUser.fluttergems}</span>
-            `;
-
-            profileInfo.innerHTML = `
-                <h3>Welcome, ${currentUser.username}!</h3>
-                <p>Email: ${currentUser.email}</p>
-                <p>Radiant: ${currentUser.radiant}</p>
-                <p>Fluttergems: ${currentUser.fluttergems}</p>
-            `;
-        } else {
-            window.location.href = 'index.html'; // Redirect to home if not logged in
-        }
-
-        editProfileBtn.addEventListener('click', function() {
-            // Implement profile editing functionality here
-            console.log('Edit profile clicked');
-        });
-    </script>
+    <script src="profile.js"></script>
 </body>
 </html>
