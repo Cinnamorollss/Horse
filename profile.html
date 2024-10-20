@@ -3,96 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - Fantasy Horse Reality</title>
+    <title>Celestial Herds - Profile</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        #user-info p {
-            margin: 10px 0;
-        }
-        #edit-form {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 5px;
-            max-width: 500px;
-            margin: 20px auto;
-        }
-        #edit-form label {
-            display: block;
-            margin-top: 10px;
-        }
-        #edit-form input, #edit-form select, #edit-form textarea {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        #edit-form button {
-            margin-top: 15px;
-            padding: 10px 15px;
-        }
-        #edit-form textarea {
-            resize: vertical;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="stable.html">Stable</a></li>
-            <li><a href="market.html">Market</a></li>
-            <li><a href="messages.html">Messages</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="lore.html">Lore</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>Celestial Herds</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="market.html">Marketplace</a></li>
+                <li><a href="stable.html">My Stable</a></li>
+                <li><a href="breeding.html">Breeding</a></li>
+                <li><a href="competitions.html">Competitions</a></li>
+                <li><a href="lore.html">Lore</a></li>
+                <li id="auth-link"><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <div id="user-header-info"></div>
+    </header>
+
     <main>
-        <h2>Your Profile</h2>
-        <div id="user-info">
-            <p><strong>Username:</strong> <span id="username"></span></p>
-            <p><strong>Account Created:</strong> <span id="account-created"></span></p>
-            <p><strong>Favorite Horse Breed:</strong> <span id="fav-horse-breed"></span></p>
-            <p><strong>Pronouns:</strong> <span id="pronouns"></span></p>
-            <p><strong>Country:</strong> <span id="country"></span></p>
-            <p><strong>Description:</strong> <span id="description"></span></p>
-        </div>
-        <button id="edit-profile-btn">Edit Profile</button>
-        <div id="edit-form" style="display: none;">
-            <h3>Edit Profile</h3>
-            <form id="profile-form">
-                <!-- Favorite Horse Breed options updated -->
-                <label for="edit-fav-horse-breed">Favorite Horse Breed:</label>
-                <select id="edit-fav-horse-breed" required>
-                    <option value="">Select a breed</option>
-                    <option value="Pegasus">Pegasus</option>
-                    <option value="Floralquin">Floralquin</option>
-                    <option value="Wraithsteeds">Wraithsteeds</option>
-                    <option value="Nebulamane">Nebulamane</option>
-                    <option value="Nocturne">Nocturne</option>
-                </select>
-
-                <!-- Pronouns, Country, and Description fields -->
-                <label for="edit-pronouns">Pronouns:</label>
-                <input type="text" id="edit-pronouns" required>
-
-                <label for="edit-country">Country:</label>
-                <input type="text" id="edit-country" required>
-
-                <label for="edit-description">Description:</label>
-                <textarea id="edit-description" rows="4" required></textarea>
-
-                <!-- Save and Cancel buttons -->
-                <button type="submit">Save Changes</button>
-                <button type="button" id="cancel-edit">Cancel</button>
-            </form>
+        <div class="centered-content">
+            <section id="profile">
+                <h2>Your Profile</h2>
+                <div id="profile-info">
+                    <!-- Profile information will be inserted here by JavaScript -->
+                </div>
+                <button id="edit-profile-btn" class="cta-button">Edit Profile</button>
+            </section>
         </div>
     </main>
+
     <footer>
-        &copy; 2024 Celestial Herds. All rights reserved.
+        <p>&copy; 2024 Celestial Herds. All rights reserved.</p>
     </footer>
-    <script src="header.js"></script>
-    <script src="profile.js"></script>
+
+    <script>
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        const userHeaderInfo = document.getElementById('user-header-info');
+        const profileInfo = document.getElementById('profile-info');
+        const editProfileBtn = document.getElementById('edit-profile-btn');
+
+        if (currentUser) {
+            userHeaderInfo.innerHTML = `
+                <span>${currentUser.username}</span>
+                <span>Radiant: ${currentUser.radiant}</span>
+                <span>Fluttergems: ${currentUser.fluttergems}</span>
+            `;
+
+            profileInfo.innerHTML = `
+                <h3>Welcome, ${currentUser.username}!</h3>
+                <p>Email: ${currentUser.email}</p>
+                <p>Radiant: ${currentUser.radiant}</p>
+                <p>Fluttergems: ${currentUser.fluttergems}</p>
+            `;
+        } else {
+            window.location.href = 'index.html'; // Redirect to home if not logged in
+        }
+
+        editProfileBtn.addEventListener('click', function() {
+            // Implement profile editing functionality here
+            console.log('Edit profile clicked');
+        });
+    </script>
 </body>
 </html>
