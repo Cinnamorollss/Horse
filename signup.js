@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         existingUsers.push(newUser);
         localStorage.setItem('existingUsers', JSON.stringify(existingUsers));
 
-        // Set current user
+        // Set current user (log in)
         localStorage.setItem('currentUser', JSON.stringify(newUser));
         
         // Redirect to homepage
