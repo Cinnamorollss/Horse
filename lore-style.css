@@ -4,11 +4,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff;
-    background-image: url('https://i.imgur.com/IKOPEHv.png');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    background-color: #f8d3e0; /* Pastel pink background */
 }
 
 header {
@@ -57,7 +53,7 @@ nav ul li {
 h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #3a0ca3;
+    color: #3a0ca3; 
 }
 
 h3 {
