@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 currentUser.isNewUser = false;
                 localStorage.setItem('currentUser', JSON.stringify(currentUser));
+
+                // Update the user in existingUsers as well
+                const existingUsers = JSON.parse(localStorage.getItem('existingUsers')) || [];
+                const userIndex = existingUsers.findIndex(user => user.username === currentUser.username);
+                if (userIndex !== -1) {
+                    existingUsers[userIndex] = currentUser;
+                    localStorage.setItem('existingUsers', JSON.stringify(existingUsers));
+                }
             } else {
                 userInfoSection.style.display = 'none';
             }
