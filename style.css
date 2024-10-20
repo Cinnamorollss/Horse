@@ -272,3 +272,23 @@ footer {
 #logout-btn {
     margin-top: 20px;
 }
+/* Lore page styles */
+.lore-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.lore-text {
+    text-align: left;
+}
+
+.lore-text h3 {
+    color: #4a148c;
+    margin-top: 30px;
+}
+
+.lore-text p {
+    margin-bottom: 15px;
+}
