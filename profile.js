@@ -1,61 +1,55 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const editBtn = document.getElementById('edit-profile-btn');
-    const editForm = document.getElementById('edit-form');
-    const profileForm = document.getElementById('profile-form');
-    const cancelEditBtn = document.getElementById('cancel-edit');
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    const profilePicture = document.getElementById('profile-picture');
+    const profilePictureInput = document.getElementById('profile-picture-input');
+    const changePictureBtn = document.getElementById('change-picture-btn');
+    const editProfileBtn = document.getElementById('edit-profile-btn');
 
-    // Sample user data (replace with actual data fetching logic)
-    let userData = {
-        username: 'Player123',
-        accountCreated: '2024-01-01', // This should be set when the account is created and not editable
-        favHorseBreed: '',
-        pronouns: '',
-        country: '',
-        description: ''
-    };
+    if (currentUser) {
+        document.getElementById('profile-username').textContent = currentUser.username;
+        document.getElementById('profile-pronouns').textContent = currentUser.pronouns || 'Not specified';
+        document.getElementById('profile-region').textContent = currentUser.region || 'Not specified';
+        document.getElementById('profile-description').textContent = currentUser.description || 'No description provided';
+        document.getElementById('profile-created').textContent = currentUser.createdAt || 'Unknown';
 
-    function updateProfileDisplay() {
-        document.getElementById('username').textContent = userData.username;
-        document.getElementById('account-created').textContent = userData.accountCreated;
-        document.getElementById('fav-horse-breed').textContent = userData.favHorseBreed || 'Not set';
-        document.getElementById('pronouns').textContent = userData.pronouns || 'Not set';
-        document.getElementById('country').textContent = userData.country || 'Not set';
-        document.getElementById('description').textContent = userData.description || 'Not set';
+        if (currentUser.profilePicture) {
+            profilePicture.src = currentUser.profilePicture;
+        }
+    } else {
+        window.location.href = 'index.html'; // Redirect to home if not logged in
     }
 
-    function populateEditForm() {
-        document.getElementById('edit-fav-horse-breed').value = userData.favHorseBreed;
-        document.getElementById('edit-pronouns').value = userData.pronouns;
-        document.getElementById('edit-country').value = userData.country;
-        document.getElementById('edit-description').value = userData.description;
-    }
-
-    editBtn.addEventListener('click', function() {
-        editForm.style.display = 'block';
-        populateEditForm();
+    changePictureBtn.addEventListener('click', function() {
+        profilePictureInput.click();
     });
 
-    cancelEditBtn.addEventListener('click', function() {
-        editForm.style.display = 'none';
+    profilePictureInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    const size = Math.min(512, img.width, img.height);
+                    canvas.width = size;
+                    canvas.height = size;
+                    ctx.drawImage(img, (img.width - size) / 2, (img.height - size) / 2, size, size, 0, 0, size, size);
+                    const resizedImage = canvas.toDataURL('image/jpeg');
+                    profilePicture.src = resizedImage;
+                    currentUser.profilePicture = resizedImage;
+                    localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
     });
 
-    profileForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Update userData with form values
-        userData.favHorseBreed = document.getElementById('edit-fav-horse-breed').value;
-        userData.pronouns = document.getElementById('edit-pronouns').value;
-        userData.country = document.getElementById('edit-country').value;
-        userData.description = document.getElementById('edit-description').value;
-
-        // Update display and hide form
-        updateProfileDisplay();
-        editForm.style.display = 'none';
-
-        // Here you would typically send the updated data to a server
-        console.log('Profile updated:', userData);
+    editProfileBtn.addEventListener('click', function() {
+        // Implement profile editing functionality here
+        console.log('Edit profile clicked');
+        // You can open a modal or redirect to an edit page
     });
-
-    // Initial profile display
-    updateProfileDisplay();
 });
