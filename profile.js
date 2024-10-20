@@ -112,5 +112,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Implement profile editing functionality here
         console.log('Edit profile clicked');
         // You can open a modal or redirect to an edit page
+       
+        // Add this function to your existing profile.js
+function logout() {
+    localStorage.removeItem('currentUser');
+    window.location.href = 'index.html';
+}
+
+// Make sure your logout button calls this function
+document.getElementById('logout-btn').addEventListener('click', logout);
     });
 });
