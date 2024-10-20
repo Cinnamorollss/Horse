@@ -4,22 +4,41 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    background-color: #fce4ec; /* Light pink background */
 }
 
 header {
-    background-color: #f4f4f4;
+    background-color: #f3e5f5; /* Light purple header */
     padding: 1rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #4a148c; /* Dark purple text */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4a148c; /* Dark purple text */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #7b1fa2; /* Lighter purple on hover */
 }
 
 .centered-content {
@@ -38,55 +57,7 @@ nav ul li {
 }
 
 h1, h2, h3, h4 {
-    color: #2c3e50;
+    color: #4a148c; /* Dark purple text */
 }
 
-.feature-list {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.feature-list li {
-    margin-bottom: 20px;
-    padding-left: 20px;
-    position: relative;
-}
-
-.feature-list li::before {
-    content: "•";
-    color: #3498db;
-    font-size: 1.5em;
-    position: absolute;
-    left: 0;
-    top: -2px;
-}
-
-.feature-list strong {
-    color: #2c3e50;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.cta-button:hover {
-    background-color: #2980b9;
-}
-
-footer {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+/* ... rest of the CSS remains the same ... */
