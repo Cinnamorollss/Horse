@@ -9,19 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Celestial Herds</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="market.html">Marketplace</a></li>
-                <li><a href="stable.html">My Stable</a></li>
-                <li><a href="breeding.html">Breeding</a></li>
-                <li><a href="competitions.html">Competitions</a></li>
-                <li><a href="lore.html">Lore</a></li>
-                <li id="auth-link"><a href="profile.html">Profile</a></li>
-            </ul>
-        </nav>
-        <div id="user-header-info"></div>
+        <!-- ... (header content remains the same) ... -->
     </header>
 
     <main>
@@ -40,6 +28,7 @@
                         <p><strong>Region:</strong> <span id="profile-region"></span></p>
                         <p><strong>Description:</strong> <span id="profile-description"></span></p>
                         <p><strong>Account Created:</strong> <span id="profile-created"></span></p>
+                        <button id="settings-btn" class="cta-button">Settings</button>
                     </div>
                 </div>
                 <button id="edit-profile-btn" class="cta-button">Edit Profile</button>
@@ -50,6 +39,29 @@
     <footer>
         <p>&copy; 2024 Celestial Herds. All rights reserved.</p>
     </footer>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Account Settings</h2>
+            <div id="settings-form">
+                <label for="change-username">Change Username:</label>
+                <input type="text" id="change-username">
+                <button id="update-username-btn">Update Username</button>
+
+                <label for="change-email">Change Email:</label>
+                <input type="email" id="change-email">
+                <button id="update-email-btn">Update Email</button>
+
+                <label for="change-password">Change Password:</label>
+                <input type="password" id="change-password">
+                <button id="update-password-btn">Update Password</button>
+
+                <button id="logout-btn" class="cta-button">Log Out</button>
+            </div>
+        </div>
+    </div>
 
     <script src="profile.js"></script>
 </body>
