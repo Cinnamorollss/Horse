@@ -93,7 +93,6 @@ footer {
     padding: 10px;
 }
 
-/* Key features list styles */
 #key-features ul {
     list-style-type: none;
     padding-left: 0;
@@ -115,34 +114,24 @@ footer {
     top: -3px;
 }
 
-/* User info section styles */
 #userInfo {
-    background-color: #e1bee7; /* Light purple background */
+    background-color: #e1bee7;
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 #userInfo h3 {
+    color: #4a148c;
     margin-top: 0;
 }
 
-#userInfo button {
-    background-color: #4a148c;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Lora', serif;
+#userInfo p {
+    margin-bottom: 10px;
 }
 
-#userInfo button:hover {
-    background-color: #7b1fa2;
-}
-
-/* CTA button styles */
 .cta-button {
     display: inline-block;
     background-color: #4a148c;
@@ -158,7 +147,6 @@ footer {
     background-color: #7b1fa2;
 }
 
-/* Modal styles */
 .modal {
     display: none;
     position: fixed;
