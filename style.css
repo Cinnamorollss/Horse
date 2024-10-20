@@ -5,6 +5,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fce4ec; /* Light pink background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -41,10 +44,17 @@ nav ul li a:hover {
     color: #7b1fa2; /* Lighter purple on hover */
 }
 
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
 .centered-content {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100%;
     text-align: center;
 }
 
@@ -61,3 +71,10 @@ h1, h2, h3, h4 {
 }
 
 /* ... rest of the CSS remains the same ... */
+
+footer {
+    background-color: #f3e5f5; /* Light purple footer */
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
