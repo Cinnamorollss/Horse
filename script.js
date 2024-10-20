@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 userInfoSection.style.display = 'none';
             }
         } else {
+            authLink.innerHTML = '<a href="signup.html">Sign Up</a>';
             userHeaderInfo.style.display = 'none';
             userInfoSection.style.display = 'none';
         }
